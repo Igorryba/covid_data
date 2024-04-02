@@ -21,7 +21,6 @@ for filename in os.scandir(directory):
 for nr in range(0, len(files_path)):
     splitted_file = files_path[nr][1].split(".")
     data_frame = (pd.read_csv(f"{directory}/{files_path[nr][1]}"))
-    print(data_frame)
     data_frame.to_excel(f"{splitted_file[0]}.xlsx", index=False)
 
 
